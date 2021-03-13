@@ -15,7 +15,7 @@ angular
 
 function inrCurrencyFilter() {
     return function(input) {
-        if (!isNaN(input)) {
+        if (input && !isNaN(input)) {
             var currencySymbol = '₹';
             //var output = Number(input).toLocaleString('en-IN');   <-- This method is not working fine in all browsers!           
             var result = input.toString().split('.');
