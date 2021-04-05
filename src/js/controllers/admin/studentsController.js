@@ -22,7 +22,8 @@ angular.module('app')
                         toastr.warning('Unable to get fees information!');
                     } else {
                         $scope.totalTuitionFees = success.data.Data[0].TotalTuitionFees;
-                        $scope.collectedTuitionFees = success.data.Data[0].CollectedTuitionFees - success.data.Data[0].TuitionFeesDiscount;
+                        $scope.collectedTuitionFees = success.data.Data[0].CollectedTuitionFees;
+                        $scope.tuitionFeesDiscount = success.data.Data[0].TuitionFeesDiscount;
                         $scope.collectedTransportFees = success.data.Data[0].CollectedTransportFees;
                         $scope.studentCount = success.data.Data[0].StudentCount;
                         // $scope.calculateTotalFees();
