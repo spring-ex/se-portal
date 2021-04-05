@@ -289,7 +289,7 @@ angular.module('app')
                             }
                         ]
                     },
-                    { text: '\nAlso fill in Application form Online - http://bit.ly/findinbox', alignment: 'center', bold: true },
+                    { text: '\nAlso fill in Application form Online - http://bit.ly/springesr', alignment: 'center', bold: true },
                 ]
             }
             pdfMake.createPdf(docDefinition).open();

@@ -638,7 +638,8 @@ angular.module('app')
             today2.setDate(31);
             var startYear = moment(today1).format("YYYY-MM-DD");
             var endYear = moment(today2).format("YYYY-MM-DD");
-            let academicYear = moment(startYear).year() + '-' + moment(endYear).year();
+            // let academicYear = moment(startYear).year() + '-' + moment(endYear).year();
+            let academicYear = $scope.selected.academicYear;
             FeesStructureFactory.getFeesStructure(LoginFactory.loggedInUser.CollegeId, $scope.newAdmission.BranchId, academicYear)
                 .then(function(success) {
                     if (success.data.Code != "S001") {
